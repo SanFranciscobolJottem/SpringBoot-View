@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title th:text="${pageTitle}">Napi SFJ</title>
+    
+    <link rel="stylesheet" th:href="@{css/main.css}" href="../static/css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Calibri' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">napiSFJ.com</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+                <p class="navbar-text navbar-right" th:text="#{yourip}">IP címed: <a href="#" class="navbar-link">127.0.0.1</a></p>
+            </div>
+        </div>
+    </nav>
+
+   
+    <article>
+        <header>
+            <h1 th:text="${error}">Ez itt a gond</h1> 
+        </header>
+    
+ 	    <section >
+            <p th:text="${message}">Ez az üzenet.</p>
+            <p th:text="${path}">Elérési út.</p>
+            <p th:text="${status}">Státusz</p>
+            <p th:text="${timestamp}">Időpont</p>
+        </section>
+        
+       
+      
+    </article>
+
+    <footer>
+        <p th:text="#{footerText}">Készült az San Franciscoból Jöttem csapata megbízásából</p>
+    </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+</body>
+</html>
