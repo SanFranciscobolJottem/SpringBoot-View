@@ -16,7 +16,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Controller
 public class ErrorPageController implements ErrorController {
-	
+	 
 	private static final String ERR_PATH = "/error";
 	
 	private ErrorAttributes errorAttributes;
@@ -40,13 +40,12 @@ public class ErrorPageController implements ErrorController {
 		return "detailedError";
 	}
 	
-	@RequestMapping(ERR_PATH)
-	public String notFound(Model model, HttpServletRequest request) {
-		return "404";
-	}
-	
-	
-	
+//	@RequestMapping(ERR_PATH)
+//	public String notFound(Model model, HttpServletRequest request) {
+//		return "404";
+//	}
+//	
+//	
 	@Override
 	public String getErrorPath() {
 		return ERR_PATH;
