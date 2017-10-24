@@ -42,7 +42,7 @@
     </nav>
 
    
-    <article th:each="story : ${stories}">
+    <article>
         <header>
             <h1 th:text="${story.title}">Ez itt a cím</h1> 
             <p th:text="${#dates.format(story.posted, 'yyyy.MM.dd HH:mm')}">Posted on September 31, 2015 at 10:00 PM</p>

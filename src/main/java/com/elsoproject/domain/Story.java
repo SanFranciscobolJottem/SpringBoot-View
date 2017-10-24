@@ -1,6 +1,7 @@
 package com.elsoproject.domain;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,12 +14,24 @@ public class Story {
 	@Id
 	private Long id;
 	private String title;
+	
+	@Column(columnDefinition = "TEXT")
 	private String content;
+
 	private Date posted;
+	
 	@ManyToOne
 	private Blogger blogger;
 
 	private Story() {}
+	
+	
+	public Story(String title, String content, Date posted, Blogger blogger) {
+		this.title = title;
+		this.content = content;
+		this.posted = posted;
+		this.blogger = blogger;
+	}
 
 	public String getTitle() {
 		return title;
